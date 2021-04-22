@@ -1,0 +1,29 @@
+{
+  "name": "react-fizz-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Limsanity/react-fizz-demo.git",
+  "author": "钟霖 <zhonglin@corp.netease.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "setup": "npm run link:react && npm run link:react-dom",
+    "postsetup": "yarn link react && yarn link react-dom",
+    "clean": "npm run ulink:react && npm run ulink:react-dom",
+    "link:react": "cd deps/react && yarn link",
+    "link:react-dom": "cd deps/react-dom && yarn link",
+    "ulink:react": "cd deps/react && yarn unlink",
+    "ulink:react-dom": "cd deps/react-dom && yarn unlink"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/register": "^7.13.16",
+    "express": "^4.17.1",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
