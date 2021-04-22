@@ -24,6 +24,7 @@ export default function render() {
       <Suspense fallback={<div>loading...</div>}>
         <Suspend />
       </Suspense>
+      <div>456</div>
     </div>
   );
 }
